@@ -6,17 +6,14 @@ function deschideCatalog() {
 const cartItemsElement = document.querySelector('.cart-items');
 const cartTotalElement = document.querySelector('.cart-total');
 
-
 let cartItems = [];
-
 
 function addToCart(product) {
     cartItems.push(product); 
     updateCart(); 
 }
-    
 
-querySelectorAll('.add-to-cart').forEach(button => {
+document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', () => {
         const productElement = button.parentElement;
         const product = {
@@ -33,21 +30,13 @@ function removeFromCart(id) {
     updateCart();
 }
 
-querySelector('.clear-cart').addEventListener('click', () => {
+document.querySelector('.clear-cart').addEventListener('click', () => {
     cartItems = []; 
     updateCart(); 
 });
 
-
-function addToCart(product) {
-    cartItems.push(product); 
-    updateCart(); 
-}
-
-
 function updateCart() {
-   innerHTML = '';
-
+    cartItemsElement.innerHTML = ''; // Clear cart items before updating
 
     let total = 0;
     cartItems.forEach(item => {
@@ -64,8 +53,12 @@ function updateCart() {
         
         cartItemsElement.appendChild(listItem);
         total += item.price;
-    });}
-    const slideshow = document.querySelector('.slideshow');
+    });
+
+    cartTotalElement.innerText = `Total: ${total} lei`; // Update total
+}
+
+const slideshow = document.querySelector('.slideshow');
 let position = 0;
 
 function moveSlideshow() {
@@ -79,10 +72,7 @@ function moveSlideshow() {
 
 setInterval(moveSlideshow, 50); 
 
-
 document.querySelector('.cumparaBtn').addEventListener('click', function() {
-    
     var numarTelefonDirector = "123456789"; 
-    
-    alert('Numărul dpentru comanda este: ' +37360487504);
+    alert('Numărul pentru comanda este: ' + numarTelefonDirector);
 });
