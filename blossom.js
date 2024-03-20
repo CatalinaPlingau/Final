@@ -98,3 +98,12 @@ function moveSlideshow() {
 }
 
 setInterval(moveSlideshow, 50); // Modificare pentru o mișcare mai rapidă
+
+// Adăugăm un eveniment de ascultare pe butonul "Cumpără"
+document.querySelector('.cumparaBtn').addEventListener('click', function() {
+    // Numărul de telefon al directorului
+    var numarTelefonDirector = "123456789"; // Înlocuiește acest număr cu numărul real al directorului
+    
+    // Afișăm numărul de telefon al directorului într-un mesaj de alertă
+    alert('Numărul dpentru comanda este: ' +37360487504);
+});
