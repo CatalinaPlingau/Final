@@ -73,6 +73,6 @@ function moveSlideshow() {
 setInterval(moveSlideshow, 50); 
 
 document.querySelector('.cumparaBtn').addEventListener('click', function() {
-    var numarTelefonDirector = "123456789"; 
-    alert('Numărul pentru comanda este: ' + numarTelefonDirector);
+    var numarTelefonDirector = "+37360487504"; 
+    alert('Numărul pentru comanda este: ' + 37360487504);
 });
